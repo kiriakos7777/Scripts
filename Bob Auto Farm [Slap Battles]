@@ -1,0 +1,50 @@
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+game:GetService("StarterGui"):SetCore("SendNotification", {
+            Title = "Working On It",
+            Text = "Pls Don't Move",
+            Duration = 7
+        })
+wait(5)
+
+fireclickdetector(workspace.Lobby.Ghost.ClickDetector)
+wait(.3)
+game:GetService("ReplicatedStorage").Ghostinvisibilityactivated:FireServer()
+wait(.3)
+fireclickdetector(workspace.Lobby.Replica.ClickDetector)
+wait(.4)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-563.724304, 329.831696, 3.99024963, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+wait(1.1)
+game:GetService("StarterGui"):SetCore("SendNotification", {
+            Title = "Farming Is On",
+            Text = "Pls Don't Move",
+            Duration = 10
+        })
+    wait(1)
+    game:GetService("StarterGui"):SetCore("SendNotification", {
+            Title = "Made By kiriakos7777#0200",
+            Text = "Credit Me",
+            Duration = 10
+        })
+
+local block = Instance.new("Part")
+
+block.Transparency = 0
+block.Anchored = true
+
+block.Position = Vector3.new(2970.19336, 132.262207, 2.81500006, 0, 1, -0, -1, 0, 0, 0, 0, 1)
+block.Parent = game.workspace.BattleArenaLobby
+block.Size = Vector3.new(75.01, 5, 150)
+block.BrickColor = BrickColor.new(0, 255, 0)
+wait(0.5)
+
+while true do
+    wait()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2980.19336, 140.262207, 2.81500006, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.E,false,game)
+    local vu = game:GetService("VirtualUser")
+	game:GetService("Players").LocalPlayer.Idled:connect(function()
+		vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+		wait(1)
+		vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+	end)
+end
