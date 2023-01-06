@@ -12,7 +12,7 @@ game:GetService("ReplicatedStorage").Ghostinvisibilityactivated:FireServer()
 wait(.3)
 fireclickdetector(workspace.Lobby.Replica.ClickDetector)
 wait(.4)
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-563.724304, 329.831696, 3.99024963, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-560.716553, 343.728821, 5.59855461, 1, 0, 0, 0, 1, 0, 0, 0, 1)
 wait(1.1)
 game:GetService("StarterGui"):SetCore("SendNotification", {
             Title = "Farming Is On",
